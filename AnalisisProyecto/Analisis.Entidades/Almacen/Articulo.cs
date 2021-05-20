@@ -9,6 +9,8 @@ namespace Analisis.Entidades.Almacen
     {
         public int idArticulo { get; set; }
 
+        public int idCategoria { get; set; }
+
         public string codigoArticulo { get; set; }
 
         [Required]
