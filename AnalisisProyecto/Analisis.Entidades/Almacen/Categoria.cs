@@ -10,7 +10,7 @@ namespace Analisis.Entidades.Almacen
         public int idCategoria { get; set; }
         
         [Required]
-        [StringLength(50, MinimumLength = 3, ErrorMessage = "Maximo 50 caràcteres")];
+        [StringLength(50, MinimumLength = 3, ErrorMessage = "Maximo 50 caràcteres")]
         public string nombre { get; set; }
         
         [StringLength(256)]
