@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Analisis.Entidades.Condicion;
+using Analisis.Entidades.Usuarios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -9,10 +11,6 @@ namespace Analisis.Entidades.Ventas
     {
 
         public int idVenta { get; set; }
-
-        public int idCliente { get; set; }
-
-        public int inUsuario { get; set; }
 
         public string tipoComprobante { get; set; }
 
@@ -27,5 +25,10 @@ namespace Analisis.Entidades.Ventas
 
         public decimal total { get; set; }
 
+        public List<Persona> personas { get; set; }
+
+        public List<Usuario> Usuarios { get; set; }
+
+        public List<estados> estados { get; set; }
     }
 }

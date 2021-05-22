@@ -8,8 +8,6 @@ namespace Analisis.Entidades.Condicion
     public class estados
     {
         public int idEstado { get; set; }
-        public int idVenta { get; set; }
-        public int idIngreso { get; set; }
 
         [Required]
         [StringLength(50, MinimumLength = 5, ErrorMessage = "Maximo 50 caràcteres")]

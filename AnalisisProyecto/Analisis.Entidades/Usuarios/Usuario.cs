@@ -9,6 +9,8 @@ namespace Analisis.Entidades.Usuarios
     {
         public int idUsuario { get; set; }
 
+        public int idCondicion { get; set; }
+
         [Required]
         [StringLength(100, MinimumLength = 8, ErrorMessage = "El nombre de usuario debe de contener mínimo 8 y un máximo de 100 carácteres")]
         public string nombre { get; set; }
@@ -42,9 +44,13 @@ namespace Analisis.Entidades.Usuarios
         [RegularExpression(@"[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}", ErrorMessage ="Email no valido")]
         public string email { get; set; }
 
-        public string passwordHash { get; set; }
+        public byte passwordHash { get; set; }
 
-        public string passwordSalt { get; set; }
+        public byte passwordSalt { get; set; }
+
+        public List<Rol> Roles { get; set; }
+
+        public List<condicion> Condicion { get; set; }
     }
 
 }

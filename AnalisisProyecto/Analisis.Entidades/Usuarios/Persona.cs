@@ -10,8 +10,6 @@ namespace Analisis.Entidades.Usuarios
 
         public int idPersona { get; set; }
 
-        public int idTipoPersona { get; set; }
-
         [Required]
         [StringLength(100, MinimumLength = 8, ErrorMessage = "El nombre debe de contener mínimo 8 y un máximo de 100 carácteres")]
         public string nombre { get; set; }
@@ -47,5 +45,7 @@ namespace Analisis.Entidades.Usuarios
         [MaxLength(50)]
         [RegularExpression(@"[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}", ErrorMessage = "Email no valido")]
         public string email { get; set; }
+
+        public List<TipoPersona> TipoPersonas { get; set; }
     }
 }

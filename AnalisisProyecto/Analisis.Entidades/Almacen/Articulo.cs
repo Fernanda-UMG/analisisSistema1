@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Analisis.Entidades.Condicion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -8,8 +9,6 @@ namespace Analisis.Entidades.Almacen
     public class Articulo
     {
         public int idArticulo { get; set; }
-
-        public int idCategoria { get; set; }
 
         public string codigoArticulo { get; set; }
 
@@ -23,5 +22,9 @@ namespace Analisis.Entidades.Almacen
 
         [StringLength(256)]
         public string descripcion { get; set; }
+
+        public List<Categoria> Categorias { get; set; }
+
+        public List<condicion> condiciones { get; set; }
     }
 }

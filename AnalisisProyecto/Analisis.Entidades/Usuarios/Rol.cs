@@ -10,6 +10,8 @@ namespace Analisis.Entidades.Usuarios
 
         public int idRol { get; set; }
 
+        public int idCondicion { get; set; }
+
         [Required]
         [StringLength(30, MinimumLength = 5, ErrorMessage = "El nombre del rol debe de tener como mìnimo 5 caracteres")]
         public string nombre { get; set; }

@@ -9,10 +9,6 @@ namespace Analisis.Entidades.Condicion
     {
 
         public int idCondicion { get; set; }
-        public int idUsuario { get; set; }
-        public int idRol { get; set; }
-        public int idCategoria { get; set; }
-        public int idArticulo { get; set; }
 
         [Required]
         [StringLength(100, MinimumLength = 5, ErrorMessage = "Maximo 100 caràcteres")]
