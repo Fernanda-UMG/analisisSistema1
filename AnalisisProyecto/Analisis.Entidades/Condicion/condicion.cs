@@ -12,6 +12,6 @@ namespace Analisis.Entidades.Condicion
 
         [Required]
         [StringLength(100, MinimumLength = 5, ErrorMessage = "Maximo 100 caràcteres")]
-        public string descricion { get; set; }
+        public string descripcion { get; set; }
     }
 }

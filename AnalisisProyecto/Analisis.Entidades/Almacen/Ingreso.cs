@@ -9,17 +9,23 @@ namespace Analisis.Entidades.Almacen
     {
 
         public int idIngreso { get; set; }
-        
+
         public int idProveedor { get; set; }
-        
+
         public int idUsuario { get; set; }
 
         public int idEstado { get; set; }
 
+        [Required]
+        [StringLength(20)]
         public string tipoComprobante{ get; set; }
-        
+
+        [Required]
+        [StringLength(7)]
         public string serieComprobante { get; set; }
-        
+
+        [Required]
+        [StringLength(10)]
         public string numComprobante { get; set; }
        
         [Required]

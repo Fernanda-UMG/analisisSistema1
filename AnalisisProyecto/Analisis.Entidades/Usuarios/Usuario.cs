@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Analisis.Entidades.Condicion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text;
@@ -17,7 +18,9 @@ namespace Analisis.Entidades.Usuarios
 
         public string apellido { get; set; }
 
-        public int tipoDocumento { get; set; }
+        [Required]
+        [StringLength(30, MinimumLength = 5, ErrorMessage = "Debe de ingresar por lo menos 5 carácteres")]
+        public string tipoDocumento { get; set; }
 
         public int numDocumento { get; set; }
 
@@ -36,7 +39,7 @@ namespace Analisis.Entidades.Usuarios
         public string colonia { get; set; }
         [Required]
         [StringLength(11, ErrorMessage = "Telefono debe de tener 11 dígitos")]
-        public string telenono { get; set; }
+        public string telefono { get; set; }
 
         [Required(ErrorMessage = "Email es obligatorio")]
         [DataType(DataType.EmailAddress)]

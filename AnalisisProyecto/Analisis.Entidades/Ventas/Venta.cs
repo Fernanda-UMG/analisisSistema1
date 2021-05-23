@@ -12,10 +12,16 @@ namespace Analisis.Entidades.Ventas
 
         public int idVenta { get; set; }
 
+        [Required]
+        [StringLength(20)]
         public string tipoComprobante { get; set; }
 
+        [Required]
+        [StringLength(7)]
         public string serieComprobante { get; set; }
 
+        [Required]
+        [StringLength(10)]
         public string numComprobante { get; set; }
 
         [Required]
