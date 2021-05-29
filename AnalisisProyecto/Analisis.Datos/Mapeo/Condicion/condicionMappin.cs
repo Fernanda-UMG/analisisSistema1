@@ -12,7 +12,7 @@ namespace Analisis.Datos.Mapeo.Condicion
         public void Configure(EntityTypeBuilder<condicion> builder)
         {
             builder.ToTable("tbl_condicion")
-               .HasKey(C => C.idCondicion;
+               .HasKey(C => C.idCondicion);
             builder.Property(C => C.descripcion)
                 .HasMaxLength(100);
         }
