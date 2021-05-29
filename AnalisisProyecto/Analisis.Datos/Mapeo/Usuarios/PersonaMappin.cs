@@ -29,7 +29,7 @@ namespace Analisis.Datos.Mapeo.Usuarios
                 .IsRequired();
             builder.Property(P => P.colonia)
                 .HasMaxLength(30);
-            builder.Property(P => P.telenono)
+            builder.Property(P => P.telefono)
                 .HasMaxLength(11);
             builder.Property(P => P.email)
                 .HasMaxLength(50);

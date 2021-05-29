@@ -11,7 +11,16 @@ namespace Analisis.Datos.Mapeo.Ventas
     {
         public void Configure(EntityTypeBuilder<DetalleVenta> builder)
         {
-            
+
+            builder.ToTable("tbl_DetalleVenta")
+                .HasKey(DV => DV.idDetalleVenta);
+            builder.Property(DV => DV.cantidad)
+                .IsRequired();
+            builder.Property(DV => DV.PrecioVenta)
+                .IsRequired();
+            builder.Property(DV => DV.descuento)
+                .IsRequired();
+
         }
     }
 }
